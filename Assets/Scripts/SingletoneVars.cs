@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class SingletoneVars : MonoBehaviour
 {
-    public static Color CurrentColor;
-    public static ColoringType CurrentColoringType;
-
-    public void UpdateColoringType()
-    {
-
-    }
+    public static Color CurrentColor = Color.green;
+    public static ColoringType CurrentColoringType = ColoringType.Brush;
 }
 
 public enum ColoringType
