@@ -11,5 +11,6 @@ public class SingletoneVars : MonoBehaviour
 public enum ColoringType
 {
     Brush,
-    Pouring
+    Pouring,
+    Eraser
 }
