@@ -17,10 +17,10 @@ public class TouchController : MonoBehaviour
         {
             if (SingletoneVars.CurrentColoringType == ColoringType.Pouring)
             {
-                foreach (var touch in Input.touches)
+                /*foreach (var touch in Input.touches)
                 {
                     RaycastPouring(touch.position);
-                }
+                }*/
                 if (Input.GetMouseButtonDown(0))//TODO: убрать, эта чать для тестов на пк
                 {
                     RaycastPouring(Input.mousePosition);
@@ -28,7 +28,7 @@ public class TouchController : MonoBehaviour
             }
             else if(SingletoneVars.CurrentColoringType == ColoringType.Brush)
             {
-                foreach (var touch in Input.touches)
+                /*foreach (var touch in Input.touches)
                 {
                     Vector2 mousePosition = Camera.main.ScreenToWorldPoint(touch.position);
                     Vector3 targerPos = new Vector3(mousePosition.x, mousePosition.y, 1000);
@@ -41,7 +41,7 @@ public class TouchController : MonoBehaviour
                         //newBrushPoint.transform.SetParent(transform, true);
                         newBrushPoint.GetComponent<SpriteRenderer>().color = SingletoneVars.CurrentColor;
                     }
-                }
+                }*/
                 
                 //TODO: убрать, эта часть для теста на пк
                 if (Input.GetMouseButton(0))
@@ -53,15 +53,15 @@ public class TouchController : MonoBehaviour
                     {
                         GameObject newBrushPoint = Instantiate(brushPointPref);
                         Vector2 tapPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                        newBrushPoint.transform.position = new Vector3(tapPoint.x, tapPoint.y, 0);
+                        newBrushPoint.transform.position = new Vector3(tapPoint.x, tapPoint.y, -1);
                         //newBrushPoint.transform.SetParent(transform, true);
                         newBrushPoint.GetComponent<SpriteRenderer>().color = SingletoneVars.CurrentColor;
                     }
                 }
             }
-            else
+            else if(!SingletoneVars.EraserSpawned)
             {
-                foreach (var touch in Input.touches)
+                /*foreach (var touch in Input.touches)
                 {
                     Vector2 mousePosition = Camera.main.ScreenToWorldPoint(touch.position);
                     Vector3 targerPos = new Vector3(mousePosition.x, mousePosition.y, 1000);
@@ -70,9 +70,10 @@ public class TouchController : MonoBehaviour
                     {
                         GameObject newBrushPoint = Instantiate(eraserPointPref);
                         Vector2 tapPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                        newBrushPoint.transform.position = new Vector3(tapPoint.x, tapPoint.y, 0);
+                        newBrushPoint.transform.position = new Vector3(tapPoint.x, tapPoint.y, -1);
+                        SingletoneVars.EraserSpawned = true;
                     }
-                }
+                }*/
                 //TODO: убрать, эта часть для теста на пк
                 if (Input.GetMouseButton(0))
                 {
@@ -84,6 +85,7 @@ public class TouchController : MonoBehaviour
                         GameObject newBrushPoint = Instantiate(eraserPointPref);
                         Vector2 tapPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                         newBrushPoint.transform.position = new Vector3(tapPoint.x, tapPoint.y, 0);
+                        SingletoneVars.EraserSpawned = true;
                     }
                 }
             }

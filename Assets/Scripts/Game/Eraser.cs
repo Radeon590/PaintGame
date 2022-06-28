@@ -5,21 +5,25 @@ using UnityEngine;
 public class Eraser : MonoBehaviour
 {
     public Touch touch;
-    //
-    private float _deathTimer = 0.5f;
 
     void Update()
     {
-        /*_deathTimer -= Time.deltaTime;
-        if (_deathTimer < 0)
+        //transform.position = Camera.main.ScreenToWorldPoint(touch.position);
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if(touch.phase == TouchPhase.Ended)
         {
+            SingletoneVars.EraserSpawned = false;
             Destroy(gameObject);
-        }*/
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            SingletoneVars.EraserSpawned = false;
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Brush")
         {
             Destroy(other.gameObject);
