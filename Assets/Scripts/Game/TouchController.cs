@@ -73,6 +73,19 @@ public class TouchController : MonoBehaviour
                         newBrushPoint.transform.position = new Vector3(tapPoint.x, tapPoint.y, 0);
                     }
                 }
+                //TODO: убрать, эта часть для теста на пк
+                if (Input.GetMouseButton(0))
+                {
+                    Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    Vector3 targerPos = new Vector3(mousePosition.x, mousePosition.y, 1000);
+                    RaycastHit2D hit = Physics2D.Raycast(mousePosition, targerPos);
+                    if (hit.collider != null && !hit.collider.gameObject.name.Contains("BlockingCanvas"))
+                    {
+                        GameObject newBrushPoint = Instantiate(eraserPointPref);
+                        Vector2 tapPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        newBrushPoint.transform.position = new Vector3(tapPoint.x, tapPoint.y, 0);
+                    }
+                }
             }
         }
     }

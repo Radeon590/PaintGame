@@ -6,6 +6,7 @@ public class SingletoneVars : MonoBehaviour
 {
     public static Color CurrentColor = Color.green;
     public static ColoringType CurrentColoringType = ColoringType.Brush;
+    public static bool EraserSpawned = false;
 }
 
 public enum ColoringType
