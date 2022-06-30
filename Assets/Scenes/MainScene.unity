@@ -489,10 +489,9 @@ GameObject:
   m_Component:
   - component: {fileID: 169528670}
   - component: {fileID: 169528669}
-  - component: {fileID: 169528671}
   - component: {fileID: 169528673}
   m_Layer: 0
-  m_Name: GameCanvas
+  m_Name: GameCanvas_BlockingCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -566,18 +565,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &169528671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169528668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474516ad4e2d9354b9e7f36aa4e1cec6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &169528673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -642,7 +629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.8925185}
   m_AnchorMax: {x: 0, y: 0.8925185}
-  m_AnchoredPosition: {x: 85, y: -248.86002}
+  m_AnchoredPosition: {x: 85, y: -248.85999}
   m_SizeDelta: {x: 170, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &284771372
@@ -762,7 +749,6 @@ GameObject:
   m_Component:
   - component: {fileID: 285625296}
   - component: {fileID: 285625295}
-  - component: {fileID: 285625294}
   - component: {fileID: 285625297}
   m_Layer: 0
   m_Name: limb
@@ -771,18 +757,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &285625294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285625293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474516ad4e2d9354b9e7f36aa4e1cec6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &285625295
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1590,7 +1564,6 @@ GameObject:
   m_Component:
   - component: {fileID: 740162600}
   - component: {fileID: 740162599}
-  - component: {fileID: 740162598}
   - component: {fileID: 740162601}
   m_Layer: 0
   m_Name: face
@@ -1599,18 +1572,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &740162598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740162597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474516ad4e2d9354b9e7f36aa4e1cec6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &740162599
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3190,7 +3151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.8925185}
   m_AnchorMax: {x: 1, y: 0.8925185}
-  m_AnchoredPosition: {x: -85.00006, y: -84.99997}
+  m_AnchoredPosition: {x: -85.00006, y: -85}
   m_SizeDelta: {x: 170, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073926462
