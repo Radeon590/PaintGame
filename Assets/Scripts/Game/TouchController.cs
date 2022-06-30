@@ -25,7 +25,7 @@ public class TouchController : MonoBehaviour
                     GameObject pouringObject = CheckRaycastObject(Input.mousePosition);
                     if(pouringObject != null)
                     {
-                        _colorer.ColorObject
+                        //_colorer.ColorObject
                     }
                 }
                 break;
